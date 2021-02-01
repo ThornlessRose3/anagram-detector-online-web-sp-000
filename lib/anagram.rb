@@ -8,16 +8,28 @@ class Anagram
   end
   
   def match(words)
-    # each index of array is tested to be an Anagram
+    # each element of array is tested to be an Anagram
     # input is an array of strings
-    # returns a string from an array
+    # returns an array with strings that are Anagrams
     
-    
+    o = @word
+    o = o.split("").sort
+    result = []
+    words.each do |w|
+      w = w.split("").sort
+      if o.eql?(w)
+        result.push(w)
+      end
+    end
+    result
   end
   
-  def isAnagram?(n)
+
+  
+  def isAnagram?
     # test if the word is an Anagram
     # return is boolean
+    # nix this and replace with eql?(other_word)
     w = @word
     w = w.split("")
     n = n.split("")
