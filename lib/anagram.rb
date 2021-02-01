@@ -18,26 +18,9 @@ class Anagram
     words.each do |w|
       wt = w.split("").sort
       if o.eql?(wt)
-        wt = wt.join
         result.push(w)
       end
     end
     result
-  end
-  
-
-  
-  def isAnagram?
-    # test if the word is an Anagram
-    # return is boolean
-    # nix this and replace with eql?(other_word)
-    w = @word
-    w = w.split("")
-    n = n.split("")
-    if w.length == n.length && w.sort == n.sort
-      TRUE
-    else
-      FALSE
-    end
   end
 end
