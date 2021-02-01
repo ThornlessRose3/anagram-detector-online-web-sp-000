@@ -7,10 +7,14 @@ class Anagram
     @word = word
   end
   
-  def match(new_word)
+  def match(words)
+    
+  end
+  
+  def isAnagram?(n)
     w = @word
     w = w.split("")
-    n = new_word.split("")
+    n = n.split("")
     if w.length == n.length && w.sort == n.sort
       TRUE
     else
