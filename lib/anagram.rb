@@ -18,6 +18,7 @@ class Anagram
     words.each do |w|
       w = w.split("").sort
       if o.eql?(w)
+        w.flatten
         result.push(w)
       end
     end
