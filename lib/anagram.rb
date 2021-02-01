@@ -16,9 +16,9 @@ class Anagram
     o = o.split("").sort
     result = []
     words.each do |w|
-      w = w.split("").sort
-      if o.eql?(w)
-        w = w.join
+      wt = w.split("").sort
+      if o.eql?(wt)
+        wt = wt.join
         result.push(w)
       end
     end
